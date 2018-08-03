@@ -40,9 +40,12 @@
 #define checkOTPMobileNumber @"mobile"
 #define checkOTP             @"otp"
 
-//Facebook Login - file (Facebook Login View)
+//Social Login - file (Facebook/Google+ Login View)
 #define socialURL    @"?rquest=Fb_Check_login"
 //params
 #define socialID             @"fb_id"
+
+//signup location - file (RegisterViewController)
+#define signupLocationURL    @"?rquest=locations"
 
 #endif /* ApiDefines_h */

@@ -49,6 +49,12 @@
 		06427E4A2104D30C00C85C82 /* MLTableAlertButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06427E422104D30800C85C82 /* MLTableAlertButtonPressed@2x.png */; };
 		06427E4B2104D30C00C85C82 /* MLTableAlertButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06427E432104D30900C85C82 /* MLTableAlertButton@2x.png */; };
 		06427E4C2104D30C00C85C82 /* MLTableAlertBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 06427E442104D30A00C85C82 /* MLTableAlertBackground.png */; };
+		065816CA211371AC005E46A3 /* LeftmenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 065816C9211371AC005E46A3 /* LeftmenuCell.m */; };
+		06C13799210C451000EAB00E /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C13797210C451000EAB00E /* ITRAirSideMenu.m */; };
+		06C1379C210C460700EAB00E /* ITRLeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1379B210C460700EAB00E /* ITRLeftMenuController.m */; };
+		06C1379F210C796900EAB00E /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1379E210C796900EAB00E /* FeedbackViewController.m */; };
+		06C137A2210C798700EAB00E /* CustomerCareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C137A1210C798700EAB00E /* CustomerCareViewController.m */; };
+		06E05896210B875C00CB79B6 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E05895210B875B00CB79B6 /* MyProfileViewController.m */; };
 		06EA354C210460A0009C2ACA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06EA35452104609D009C2ACA /* Default-568h@2x.png */; };
 		06EA354D210460A0009C2ACA /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06EA35462104609D009C2ACA /* Comfortaa-Bold.ttf */; };
 		06EA354E210460A0009C2ACA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06EA35472104609E009C2ACA /* Default@2x.png */; };
@@ -161,6 +167,18 @@
 		06427E422104D30800C85C82 /* MLTableAlertButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MLTableAlertButtonPressed@2x.png"; sourceTree = "<group>"; };
 		06427E432104D30900C85C82 /* MLTableAlertButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MLTableAlertButton@2x.png"; sourceTree = "<group>"; };
 		06427E442104D30A00C85C82 /* MLTableAlertBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MLTableAlertBackground.png; sourceTree = "<group>"; };
+		065816C8211371AC005E46A3 /* LeftmenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftmenuCell.h; sourceTree = "<group>"; };
+		065816C9211371AC005E46A3 /* LeftmenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftmenuCell.m; sourceTree = "<group>"; };
+		06C13797210C451000EAB00E /* ITRAirSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRAirSideMenu.m; sourceTree = "<group>"; };
+		06C13798210C451000EAB00E /* ITRAirSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRAirSideMenu.h; sourceTree = "<group>"; };
+		06C1379A210C460700EAB00E /* ITRLeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRLeftMenuController.h; sourceTree = "<group>"; };
+		06C1379B210C460700EAB00E /* ITRLeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRLeftMenuController.m; sourceTree = "<group>"; };
+		06C1379D210C796900EAB00E /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		06C1379E210C796900EAB00E /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		06C137A0210C798700EAB00E /* CustomerCareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerCareViewController.h; sourceTree = "<group>"; };
+		06C137A1210C798700EAB00E /* CustomerCareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerCareViewController.m; sourceTree = "<group>"; };
+		06E05894210B875B00CB79B6 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		06E05895210B875B00CB79B6 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		06EA35452104609D009C2ACA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		06EA35462104609D009C2ACA /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
 		06EA35472104609E009C2ACA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -275,10 +293,16 @@
 				060A7FD820FFB1AD00519296 /* ViewController.m */,
 				06EA355621046142009C2ACA /* ForgotpasswordViewController.h */,
 				06EA355521046142009C2ACA /* ForgotpasswordViewController.m */,
+				06E05894210B875B00CB79B6 /* MyProfileViewController.h */,
+				06E05895210B875B00CB79B6 /* MyProfileViewController.m */,
 				06EA355321046141009C2ACA /* SecondViewController.h */,
 				06EA355421046141009C2ACA /* SecondViewController.m */,
 				06EA3559210480DE009C2ACA /* HomeViewController.h */,
 				06EA355A210480DE009C2ACA /* HomeViewController.m */,
+				06C1379D210C796900EAB00E /* FeedbackViewController.h */,
+				06C1379E210C796900EAB00E /* FeedbackViewController.m */,
+				06C137A0210C798700EAB00E /* CustomerCareViewController.h */,
+				06C137A1210C798700EAB00E /* CustomerCareViewController.m */,
 				060A7FDA20FFB1AD00519296 /* Main.storyboard */,
 				060A7FE020FFB1B200519296 /* Assets.xcassets */,
 				060A7FE220FFB1B200519296 /* LaunchScreen.storyboard */,
@@ -310,6 +334,7 @@
 		060A800920FFB6AE00519296 /* 3rd Party Classes */ = {
 			isa = PBXGroup;
 			children = (
+				06C13796210C44EC00EAB00E /* SideMenu */,
 				06EA355E210485A7009C2ACA /* SVProgressHUD */,
 				061F8EE92103A2A000565323 /* Facebook SDK */,
 				060A800A20FFB6C300519296 /* AFNetworking-3.0 */,
@@ -433,6 +458,19 @@
 				06427E412104D30600C85C82 /* MLTableAlertShadowMask@2x.png */,
 			);
 			path = imgs;
+			sourceTree = "<group>";
+		};
+		06C13796210C44EC00EAB00E /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				06C13798210C451000EAB00E /* ITRAirSideMenu.h */,
+				06C13797210C451000EAB00E /* ITRAirSideMenu.m */,
+				06C1379A210C460700EAB00E /* ITRLeftMenuController.h */,
+				06C1379B210C460700EAB00E /* ITRLeftMenuController.m */,
+				065816C8211371AC005E46A3 /* LeftmenuCell.h */,
+				065816C9211371AC005E46A3 /* LeftmenuCell.m */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		06EA355E210485A7009C2ACA /* SVProgressHUD */ = {
@@ -604,6 +642,7 @@
 				060A802920FFB87000519296 /* AFURLSessionManager.m in Sources */,
 				06EA355721046142009C2ACA /* SecondViewController.m in Sources */,
 				060A804520FFB8AA00519296 /* UIImageView+AFNetworking.m in Sources */,
+				065816CA211371AC005E46A3 /* LeftmenuCell.m in Sources */,
 				060A802720FFB87000519296 /* AFSecurityPolicy.m in Sources */,
 				060A802A20FFB87000519296 /* AFNetworkReachabilityManager.m in Sources */,
 				060A7FD920FFB1AD00519296 /* ViewController.m in Sources */,
@@ -612,11 +651,15 @@
 				06EA356C210485C2009C2ACA /* SVProgressHUD.m in Sources */,
 				06EA356B210485C2009C2ACA /* SVRadialGradientLayer.m in Sources */,
 				06EA355B210480DE009C2ACA /* HomeViewController.m in Sources */,
+				06C1379C210C460700EAB00E /* ITRLeftMenuController.m in Sources */,
 				060A802520FFB87000519296 /* AFURLRequestSerialization.m in Sources */,
 				060A802620FFB87000519296 /* AFHTTPSessionManager.m in Sources */,
 				060A803F20FFB8AA00519296 /* UIRefreshControl+AFNetworking.m in Sources */,
+				06C13799210C451000EAB00E /* ITRAirSideMenu.m in Sources */,
+				06E05896210B875C00CB79B6 /* MyProfileViewController.m in Sources */,
 				060A804120FFB8AA00519296 /* AFAutoPurgingImageCache.m in Sources */,
 				060A804020FFB8AA00519296 /* UIWebView+AFNetworking.m in Sources */,
+				06C137A2210C798700EAB00E /* CustomerCareViewController.m in Sources */,
 				060A804620FFB8AA00519296 /* AFImageDownloader.m in Sources */,
 				060A7FE720FFB1B200519296 /* main.m in Sources */,
 				060A804320FFB8AA00519296 /* UIButton+AFNetworking.m in Sources */,
@@ -629,6 +672,7 @@
 				060A804420FFB8AA00519296 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				060A7FD620FFB1AD00519296 /* AppDelegate.m in Sources */,
 				06EA356A210485C2009C2ACA /* SVProgressAnimatedView.m in Sources */,
+				06C1379F210C796900EAB00E /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
