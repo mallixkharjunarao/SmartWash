@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Define.h"
+#import "ITRAirSideMenu.h"
+
 
 @interface ViewController : UIViewController<GIDSignInUIDelegate, UITextFieldDelegate>
 
@@ -26,12 +28,10 @@
 
 -(IBAction)googleplusLogin:(id)sender;
 
-
 -(IBAction)loginBtnAction:(id)sender;
 
-
-
 -(IBAction)signupBtnAction:(id)sender;
+
 
 @end
 

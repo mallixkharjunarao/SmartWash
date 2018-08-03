@@ -115,4 +115,13 @@
     [operationManager POST:checkOTPURL parameters:dataDict progress:nil success:success failure:failure];
 }
 
+// For Signup locations Api
+- (void)signupLocationWithDetails:(NSArray *)details
+                          success:(void (^)(NSURLSessionTask *peration, id responseObject))success
+                          failure:(void (^)(NSURLSessionTask *operation, NSError *error))failure{
+    
+    AFHTTPSessionManager* operationManager = [[self class] sessionManager];
+    [operationManager POST:signupLocationURL parameters:nil progress:nil success:success failure:failure];
+}
+
 @end

@@ -15,6 +15,7 @@
 #import "HomeViewController.h"
 #import "SVProgressHUD.h"
 #import "VoxReachabilityManager.h"
+#import "ITRLeftMenuController.h"
 
 @interface ViewController ()
 
@@ -316,8 +317,11 @@ dismissViewController:(UIViewController *)viewController {
     
     [SVProgressHUD show];
     
-    if([self checkValidations]) {
+    self.Tf_Mobilenumber.text = @"919666949789";
+    self.Tf_Password.text=@"123456";
     
+    if([self checkValidations]) {
+        
     NSArray *details = [[NSArray alloc] initWithObjects:self.Tf_Mobilenumber.text,self.Tf_Password.text, nil];
     [[ApiManager sharedManager] loginWithDetails:details success:^(NSURLSessionTask *operation, id responseObject) {
         
@@ -329,6 +333,7 @@ dismissViewController:(UIViewController *)viewController {
         [ud setValue:[json valueForKey:@"User_id"] forKey:@"user_id"];
         [ud setValue:[json valueForKey:@"User_Name"] forKey:@"User_Name"];
         [ud setValue:[json valueForKey:@"User_id"] forKey:@"user_id"];
+        [ud synchronize];
         NSString *status_login = (NSString *)[json valueForKey:@"status"];
         [SVProgressHUD dismiss];
         if ([status_login isEqualToString:@"valid"]) {

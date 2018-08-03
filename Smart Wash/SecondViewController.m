@@ -21,9 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    arrayName=[[NSMutableArray alloc] initWithObjects:@"gvp",@"Madhapur",nil];
-    arrayIds =[[NSMutableArray alloc] initWithObjects:@"0",@"1",nil];
-    
     _Tfd_Username.placeholder = @"USER NAME";
     _Tfd_Password.placeholder = @"PASSWORD";
     _Tfd_Mobilenumber.placeholder = @"MOBILE NUMBER";
@@ -100,9 +97,20 @@
     _Btn_Placeorder.layer.cornerRadius = 5;
     [_Btn_Placeorder setClipsToBounds:YES];
     
-    
+    [self performSelectorInBackground:@selector(locationApicall) withObject:nil];
     
     // Do any additional setup after loading the view.
+}
+
+-(void)locationApicall{
+    [[ApiManager sharedManager] signupLocationWithDetails:nil success:^(NSURLSessionTask *operation, id responseObject) {
+        NSMutableDictionary *json = responseObject;
+        NSArray *locationscount = [json valueForKey:@"location_id"];
+        arrayName=[[NSMutableArray alloc] initWithObjects:@"gvp",@"Madhapur",nil];
+        arrayIds =[[NSMutableArray alloc] initWithObjects:@"0",@"1",nil];
+        
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+    }];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -164,9 +172,6 @@
     if (errorString!=nil)
     {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:APP_NAME message:errorString preferredStyle:UIAlertControllerStyleAlert];
-        //        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
-        //            NSLog(@"Cancel");
-        //        }];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
             NSLog(@"OK");
         }];

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "VoxReachabilityManager.h"
+#import "ITRLeftMenuController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     // Override point for customization after application launch.
     [[FBSDKApplicationDelegate sharedInstance] application:application
                                                 didFinishLaunchingWithOptions:launchOptions];
@@ -27,7 +30,52 @@
     
     // Register for Reachability Callback Methods---
     [VoxReachabilityManager voxReachability];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //sidemenu created with content view controller & menu view controller
 
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    UINavigationController *navigationController;
+    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    if ([ud valueForKey:@"user_id"]==nil || [[ud valueForKey:@"user_id"] isEqualToString:@"Empty"]){
+        navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"viewcontrol"]];
+
+    }else{
+        navigationController = [[UINavigationController alloc] initWithRootViewController:[storyboard instantiateViewControllerWithIdentifier:@"homeview"]];
+    }
+
+    ITRLeftMenuController *leftMenuViewController = [ITRLeftMenuController controller];
+    _itrAirSideMenu = [[ITRAirSideMenu alloc] initWithContentViewController:navigationController leftMenuViewController:leftMenuViewController];
+
+   // _itrAirSideMenu.backgroundImage = [UIImage imageNamed:@"menu_bg"];
+
+    //optional delegate to receive menu view status
+    _itrAirSideMenu.delegate = leftMenuViewController;
+
+    //content view shadow properties
+    _itrAirSideMenu.contentViewShadowColor = [UIColor blackColor];
+    _itrAirSideMenu.contentViewShadowOffset = CGSizeMake(0, 0);
+    _itrAirSideMenu.contentViewShadowOpacity = 0.6;
+    _itrAirSideMenu.contentViewShadowRadius = 12;
+    _itrAirSideMenu.contentViewShadowEnabled = YES;
+
+    //content view animation properties
+    _itrAirSideMenu.contentViewScaleValue = 0.7f;
+    _itrAirSideMenu.contentViewRotatingAngle = 30.0f;
+    _itrAirSideMenu.contentViewTranslateX = 130.0f;
+
+    //menu view properties
+    _itrAirSideMenu.menuViewRotatingAngle = 30.0f;
+    _itrAirSideMenu.menuViewTranslateX = 130.0f;
+
+    self.window.rootViewController = _itrAirSideMenu;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     // Add any custom logic here.
     return YES;
 }
@@ -70,9 +118,7 @@ didSignInForUser:(GIDGoogleUser *)user
     // ...
     NSMutableArray *googlearray = [[NSMutableArray alloc]initWithObjects:userId,idToken,fullName,givenName,familyName,email, nil];
     NSLog(@"Goggle+ loged in user = %@",googlearray);
-
      [[NSNotificationCenter defaultCenter]postNotificationName:@"googleplus_login" object:userId userInfo:nil];
-
 }
 
 - (void)signIn:(GIDSignIn *)signIn

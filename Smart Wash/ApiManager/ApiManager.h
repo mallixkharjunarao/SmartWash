@@ -42,4 +42,9 @@
                     success:(void (^)(NSURLSessionTask *peration, id responseObject))success
                     failure:(void (^)(NSURLSessionTask *operation, NSError *error))failure;
 
+// For Signup locations Api
+- (void)signupLocationWithDetails:(NSArray *)details
+                    success:(void (^)(NSURLSessionTask *peration, id responseObject))success
+                    failure:(void (^)(NSURLSessionTask *operation, NSError *error))failure;
+
 @end
